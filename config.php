@@ -1,14 +1,12 @@
 <?php
+session_start();
 
-    session_start();
+// Database configuration
+$host     = "localhost";
+$username = "root";
+$password = "";
+$database = "inventaris_gudang";
 
-    // Database configuration
-    $host     = "localhost";
-    $username = "root";
-    $password = "";
-    $database = "inventaris_gudang";
-
-    // Create connection
-    $conn = mysqli_connect($host, $username, $password, $database);
-
+// Create connection
+$conn = mysqli_connect($host, $username, $password, $database);
 ?>

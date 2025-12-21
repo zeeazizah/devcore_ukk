@@ -14,3 +14,58 @@ body {
     rgba(182,108,255,0.95)
   );
 }
+
+.login-page {
+  height: 100vh;
+  background: linear-gradient(135deg, #1b5e20, #2e7d32);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* KOTAK LOGIN (GLASS EFFECT) */
+.login-card {
+  width: 350px;
+  padding: 30px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  backdrop-filter: blur(12px);
+  box-shadow: 0 15px 40px rgba(0,0,0,0.35);
+  text-align: center;
+}
+
+/* ICON USER */
+.login-icon {
+  width: 70px;
+  height: 70px;
+  background: rgba(0,0,0,0.6);
+  border-radius: 50%;
+  margin: -60px auto 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 30px;
+}
+
+/* INPUT */
+.login-card input {
+  width: 100%;
+  padding: 10px 14px;
+  border-radius: 6px;
+  border: none;
+  margin-bottom: 12px;
+}
+
+/* BUTTON */
+.login-card button {
+  width: 100%;
+  padding: 10px;
+  background: #1b5e20;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+
