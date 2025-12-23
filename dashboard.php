@@ -1,3 +1,12 @@
+<?php
+session_start();
+
+if (!isset($_SESSION['login'])) {
+    header("Location: login.php");
+    exit;
+}
+?>
+
 
 <!DOCTYPE html>
 <html lang="en">
@@ -87,40 +96,25 @@
             </div>
 
             <!-- Table -->
-            <div class="card shadow-sm">
-                <div class="card-header fw-semibold">
-                    Latest Transactions
-                </div>
-                <div class="card-body p-0">
-                    <table class="table table-striped mb-0">
-                        <thead class="table-light">
-                            <tr>
-                                <th>#</th>
-                                <th>Item</th>
-                                <th>Type</th>
-                                <th>Qty</th>
-                                <th>Date</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>1</td>
-                                <td>Printer Epson</td>
-                                <td>OUT</td>
-                                <td>2</td>
-                                <td>2026-01-15</td>
-                            </tr>
-                            <tr>
-                                <td>2</td>
-                                <td>Kertas A4</td>
-                                <td>IN</td>
-                                <td>10</td>
-                                <td>2026-01-15</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
+         <tbody>
+<?php if (mysqli_num_rows($query) > 0): ?>
+    <?php $no = 1; ?>
+    <?php while ($row = mysqli_fetch_assoc($query)): ?>
+        <tr>
+            <td><?= $no++ ?></td>
+            <td><?= $row['item'] ?></td>
+            <td><?= $row['type'] ?></td>
+            <td><?= $row['qty'] ?></td>
+            <td><?= $row['tanggal'] ?></td>
+        </tr>
+    <?php endwhile; ?>
+<?php else: ?>
+    <tr>
+        <td colspan="5" class="text-center">Belum ada transaksi</td>
+    </tr>
+<?php endif; ?>
+</tbody>
+
 
         </main>
     </div>
