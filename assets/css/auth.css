@@ -1,0 +1,16 @@
+body {
+  background: linear-gradient(135deg, #6a5cff, #b66cff);
+}
+
+.auth-card {
+  max-width: 900px;
+  min-height: 420px;
+}
+
+.auth-left {
+  background: linear-gradient(
+    135deg,
+    rgba(106,92,255,0.95),
+    rgba(182,108,255,0.95)
+  );
+}
