@@ -1,6 +1,6 @@
 <?php
 session_start();
-require_once "config/database.php";
+include "config.php";
 
 $username = $_POST['username'];
 $password = $_POST['password'];

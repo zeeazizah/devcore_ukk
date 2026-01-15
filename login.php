@@ -13,7 +13,7 @@ if (isset($_SESSION['login'])) {
   <meta name="viewport" content="width=device-width, initial-scale=1">
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
 
   <!-- Custom CSS -->
   <link rel="stylesheet" href="assets/css/auth.css">
@@ -26,7 +26,7 @@ if (isset($_SESSION['login'])) {
     <!-- LEFT PANEL -->
     <div class="col-md-6 d-none d-md-flex auth-left text-white p-5">
       <div class="my-auto">
-        <h2 class="fw-bold mb-3">Welcome to website</h2>
+        <h2 class="fw-bold mb-3">Welcome to DevCore</h2>
         <p class="opacity-75">
           Inventory system built by DevCore.  
           Simple, fast, and structured for warehouse management.
@@ -36,7 +36,7 @@ if (isset($_SESSION['login'])) {
 
     <!-- RIGHT PANEL -->
     <div class="col-md-6 bg-white p-5">
-      <div class="text-center mb-4">
+      <div class="text-center mb-5">
         <h5 class="fw-semibold text-primary">USER LOGIN</h5>
       </div>
 
@@ -57,7 +57,7 @@ if (isset($_SESSION['login'])) {
           <a href="#" class="text-decoration-none">Forgot password?</a>
         </div>
 
-        <button class="btn btn-primary w-100 rounded-pill py-2 fw-semibold">
+        <button class="btn btn-primary w-100 rounded-pill py-2 fw-semibold" href="login_process.php">
           LOGIN
         </button>
 
